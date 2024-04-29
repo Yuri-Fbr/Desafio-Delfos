@@ -1,2 +1,2 @@
 # Desafio-Delfos
-Login template
+Desafio: Criar uma Página de Login com HTML, CSS e JavaScript;
