@@ -11,10 +11,47 @@
 </head>
 <body>
     <div class="container">
-        <h1>Login</h1>
-        <input type="text" placeholder="Nome de usuário">
-        <input type="password" placeholder="Senha">
-        <button>Entrar</button>
+            <h1>Login</h1>
+            <div class="name">
+                <input type="text" placeholder="Nome de usuário" id="name">
+                <div id="invalid1"><p></p></div>
+            </div>
+
+            <div class="password">
+                <input type="password" placeholder="Senha" id="password">
+                <div id="invalid2"><p></p></div>
+            </div>
+
+            <button>Entrar</button>                
     </div>
+    <script>
+
+        const btn = document.querySelector('button');
+        var inv1 = document.getElementById('invalid1');
+        var inv2 = document.getElementById('invalid2');
+
+        btn.addEventListener('click', entrar);
+
+        
+        function entrar() {
+            var name = document.getElementById('name').value;
+            var password = document.getElementById('password').value;
+
+            if (name == '') {
+                inv1.innerHTML = `<p>Por favor, insira um nome de usuário</p>`
+            }
+            else {
+                inv1.innerHTML = ``
+            }
+            if (password == '') {
+                inv2.innerHTML = `<p>Por favor, insira uma senha</p>`
+            }
+            else {
+                inv2.innerHTML = ``
+            }
+        }
+        
+    </script>
+
 </body>
 </html>
